@@ -22,10 +22,7 @@ int temp1[Q-P+1], temp2[S-R+1];
         i++;
         x++;
     }
-        for(int i =0;i<Q-P+1;i++){
-        cout<<temp1[i]<<" ";
-    }
-    cout<<endl;
+
 i=R;
 x=0;
         while(i<=S){
@@ -34,25 +31,24 @@ x=0;
         x++;
     }
 
-           for(int i =0;i<S-R+1;i++){
-        cout<<temp2[i]<<" ";
-    }
-        cout<<endl;
+
 int temp1_index=0;
 int  temp2_index=0;
+int B[N];
     for(int i =0;i<N;i++){
         
         if(i>=P-1 && i<=Q-1){
-            array[i]=temp2[temp2_index];
+            B[i]=temp2[temp2_index];
         temp2_index++;
         }
-         if(i>=R-1 && i<=S-1){
-            array[i]=temp1[temp1_index];
+        else if(i>=R-1 && i<=S-1){
+            B[i]=temp1[temp1_index];
         temp1_index++; 
         }
+        else B[i]=array[i];
     }
         for(int i =0;i<N;i++){
-        cout<<array[i]<<" ";
+        cout<<B[i]<<" ";
     }
     cout<<endl;
 }
