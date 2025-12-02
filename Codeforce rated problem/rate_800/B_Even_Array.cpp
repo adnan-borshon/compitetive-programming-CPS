@@ -16,7 +16,21 @@ int main(){
     int t;
     cin >> t;
     while(t--){
+        int N;
         
+        cin>>N;
+        int array[N];
+        for(int i=0;i<N;i++)cin>>array[i];
+        int evn=0,odd=0;
+
+        for(int i=0;i<N;i++){
+            if((i%2)!=(array[i]%2)){
+                if(i%2==0)evn++;
+                else odd++;
+            }
+        }
+ if(evn!=odd)cout<<-1<<endl;
+        else cout<<evn<<endl;
     }
     return 0;
 }
