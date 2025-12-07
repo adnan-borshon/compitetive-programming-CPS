@@ -13,10 +13,16 @@ using ld = long double;
 
 int main(){
     fast;
-    int N;
-    cin>>N;
-    string pi= 
-"3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679";
-cout<<pi.substr(0,2+N)<<endl;
+ int L, R;
+ cin>>L>>R;
+ string S;
+ cin>>S;
+ for(int i=L-1, j=R-1;i<j;i++,j--){
+    char temp=S[i];
+    S[i]=S[j];
+    S[j]=temp;
+
+ }
+ cout<<S<<endl;
     return 0;
 }

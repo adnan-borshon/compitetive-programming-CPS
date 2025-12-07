@@ -13,10 +13,25 @@ using ld = long double;
 
 int main(){
     fast;
-    int N;
-    cin>>N;
-    string pi= 
-"3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679";
-cout<<pi.substr(0,2+N)<<endl;
+  int N;
+  cin>>N;
+  string S;
+cin>>S;
+int Takahashi=0, Aoki=0;
+int mx;
+for(int i=0;i<N;i++){
+if(S[i]=='T'){
+    Takahashi++;
+}
+else if(S[i]=='A'){
+    Aoki++;
+}
+}
+if(Takahashi==Aoki){
+    if(S[N-1]=='T')Takahashi--;
+    else Aoki--;
+}
+if(Takahashi>Aoki)cout<<"T"<<endl;
+else cout<<"A"<<endl;
     return 0;
 }
