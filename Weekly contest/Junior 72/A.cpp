@@ -11,25 +11,11 @@ using ld = long double;
 #define ff first
 #define ss second
 
-
-
-
 int main(){
     fast;
-    int t;
-    cin >> t;
-    while(t--){
-        int N;
-        cin>>N;
-        vector<int>V(N);
-        for(int &x:V)cin>>x;
-    int sum=0;
-    vector<int>even, odd;
-    for(int i=0;i<N;i++){
-        if(V[i]%2==0)odd.push_back(V[i]);
-        else even.push_back(V[i]);
-    }
-
-    }
+int X,N,M;
+cin>>X>>N>>M;
+if(X+M>=N)cout<<"YES"<<endl;
+else cout<<"NO"<<endl;
     return 0;
 }

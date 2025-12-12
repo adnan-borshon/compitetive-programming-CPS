@@ -11,25 +11,20 @@ using ld = long double;
 #define ff first
 #define ss second
 
-
-
-
 int main(){
     fast;
-    int t;
-    cin >> t;
-    while(t--){
-        int N;
-        cin>>N;
-        vector<int>V(N);
-        for(int &x:V)cin>>x;
-    int sum=0;
-    vector<int>even, odd;
-    for(int i=0;i<N;i++){
-        if(V[i]%2==0)odd.push_back(V[i]);
-        else even.push_back(V[i]);
-    }
+int N;
+cin>>N;
+vector<int>V(N);
+for(int &x:V)cin>>x;
 
-    }
+// vector<int>B(N);
+for(int i=0;i<N-1;i++){
+    // B[i]=V[i]*V[i+1];
+    cout<<V[i]*V[i+1]<<" ";
+}
+// for(int i=0;i<N-1;i++){
+//    cout<<B[i]<<" ";
+// }
     return 0;
 }

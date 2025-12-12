@@ -11,34 +11,17 @@ using ld = long double;
 #define ff first
 #define ss second
 
-
-bool check_one(string S, int N){
-    bool ones=true;
-    for(int i=0;i<N;i++){
-        if(S[i]!=1){
-            ones=false;
-            break;
-        }
-    }
-    return ones;
-}
 int main(){
     fast;
     int t;
     cin >> t;
     while(t--){
-        int N;
-        cin>>N;
-        string S;
-        cin>>S;
-        S+=S;
-ll ans=0, temp=0;
-for(auto& it:S){
-    if(it=='0')ans= max(ans, ++temp);
-    else temp=0;
-
-}
-cout<<ans<<endl;
+        vector<int>V(3);
+        for(int &x:V)cin>>x;
+        sort(V.begin(), V.end());
+        if(V[1]!=V[2])cout<<"NO"<<endl;
+        else cout<<"YES"<<endl<< V[0]<<" "<<V[0]<<" "<<V[2]<<endl;
+        
     }
     return 0;
 }
